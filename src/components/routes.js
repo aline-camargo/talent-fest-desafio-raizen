@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
-import ScanPage from '../pages/readQRCode';
+import ScanPage from '../pages/scanPage';
 import Map from '../components/map';
+import Checked from '../pages/checked';
 
 const Routes = () => {
   return (
@@ -9,7 +10,7 @@ const Routes = () => {
       <Switch>
         <Route exact path='/' component={Map} />
         <Route path='/scan' component={ScanPage} />
-        {/* <Route path='/map' component={Map} /> */}
+        <Route path='/goodtrip' component={Checked} />
       </Switch>
     </BrowserRouter>
   );
