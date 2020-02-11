@@ -43,7 +43,8 @@ const Map = () => {
                 <Marker
                 lat={el.lat}
                 lng={el.lng}
-                // onTap={H.util.Event('tap', console.log('clicou')}
+                onPointerUp={() => console.log('oi')}
+                onClick={() => console.log('oi')}
                 />
             )}
         

@@ -1,10 +1,11 @@
 import React from 'react';
-import Map from './components/map.js'
+// import Map from './components/map.js'
+import Routes from '../src/components/routes';
 
 function App() {
-  return(
-  <>
-    <Map />
+  return (
+    <>
+      <Routes />
     </>
   )
 }
