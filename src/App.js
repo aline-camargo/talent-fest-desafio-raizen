@@ -1,10 +1,12 @@
 import React from 'react';
+import Map from './components/map.js'
 
 function App() {
-  return (
-    <div className="App">
-    </div>
-  );
+  return(
+  <>
+    <Map />
+    </>
+  )
 }
 
 export default App;
