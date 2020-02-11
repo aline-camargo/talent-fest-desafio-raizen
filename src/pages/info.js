@@ -10,6 +10,7 @@ import Button from '../components/Button';
 const styles = StyleSheet.create({
     infoPage: {
         display: "flex",
+        flexDirection: "column"
     },
     menu: {
         alignSelf: "flex-start",
@@ -26,6 +27,30 @@ const styles = StyleSheet.create({
     },
     patinete: {
         width: "35%"
+    },
+    divInfo: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "10px"
+    },
+    phoneImg: {
+        width: "16%",
+        marginRight: "20px"
+    },
+    qrCode: {
+        width: "16%",
+        
+    },
+    section: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        margin: "10px"
+    },
+    paragraph: {
+        width: "30vw"
     }
 })
 
@@ -38,20 +63,22 @@ const Info = () => {
                 <h4>Saiba como funciona</h4>
                 <img src={arrow} className={css(styles.arrowIcon)}></img>
             </header>
-            <section>
-                <div>
+            <section className={css(styles.section)}>
+                <div className={css(styles.divInfo)}>
                     <img src={iconecel} className={css(styles.phoneImg)}></img>
-                    <p>Localize o posto com Shell Box mais próximo.</p>
+                    <p className={css(styles.paragraph)}>Localize o posto com Shell Box mais próximo.</p>
                 </div>
-                <div>
-                    <p>Digitalize o QRCODE do patinete</p>
+                <div className={css(styles.divInfo)}>
+                    <p className={css(styles.paragraph)}>Digitalize o QRCODE do patinete</p>
                     <img src={iconeqrcode} className={css(styles.qrCode)}></img>
                 </div>
-                <div>
+                <div className={css(styles.divInfo)}>
                     <img src={iconecel} className={css(styles.phoneImg)}></img>
-                    <p>Alugue e pague com o app</p>
+                    <p className={css(styles.paragraph)}>Alugue e pague com o app</p>
                 </div>
-                <Button/>
+                <Button
+                title="Encontre um patinete"
+                />
             </section>
         </div>
     )
