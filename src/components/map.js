@@ -1,15 +1,5 @@
 import React from 'react';
-import { StyleSheet, css } from 'aphrodite/no-important'
 import HEREMap, { Marker } from 'here-maps-react';
-
-const styles = StyleSheet.create({
-    maps: {
-        width: '700px',
-        height: '480px',
-        padding: '1px',
-        margin:'3px'
-    }
-})
 
 const positions = [
     {
@@ -26,30 +16,25 @@ const positions = [
     }
 ]
 
-// let router = plataform.getRoutingService();
-
-// router.calculateRoute(rountingParam, onResult, error => { alert(error.message)})
-
 const Map = () => {
+
     return (
-    <div className={css(styles.maps)}>  
-        <HEREMap
-        appId="C5yOBfoD80gJHCmKhP2731n4mVyQKK_2Ae987sM0sys"
-        //appCode="my_app_code"
-        center= {{ lat: -23.557536, lng: -46.662385 }}
-        zoom={15}
-        >
-            {positions.map((el) =>
-                <Marker
-                lat={el.lat}
-                lng={el.lng}
-                onPointerUp={() => console.log('oi')}
-                onClick={() => console.log('oi')}
-                />
-            )}
-        
-        </HEREMap>
-    </div>
+    <HEREMap
+    appId="C5yOBfoD80gJHCmKhP2731n4mVyQKK_2Ae987sM0sys"
+    //appCode="my_app_code"
+    center= {{ lat: -23.557536, lng: -46.662385 }}
+    zoom={15}
+    >
+        {positions.map((el, index) =>
+            <Marker
+            id={index}
+            lat={el.lat}
+            lng={el.lng}
+            onTap={() => console.log('clicou')}
+            />
+        )}
+    </HEREMap>
+
   );
 }
 
