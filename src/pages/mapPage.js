@@ -7,17 +7,17 @@ import { useHistory, Link } from 'react-router-dom';
 
 const styles = StyleSheet.create({
 
-    title: {
-        color:'#404040'
-    },
-    maps: {
-        width: '350px',
-        height: '380px',
-        padding: '1px',
-        margin: '3px',
-        border: '1px solid #404040',
-        borderRadius: '3px',
-  },                                 
+  title: {
+    color: '#404040'
+  },
+  maps: {
+    width: '350px',
+    height: '380px',
+    padding: '1px',
+    margin: '3px',
+    border: '1px solid #404040',
+    borderRadius: '3px',
+  },
   button: {
     fontSize: '1.2em',
     margin: '1em 0',
@@ -51,26 +51,26 @@ const MapPage = () => {
 
   return (
     <>
-    <div className={css(styles.header)}>
-      <img src={menu} className={css(styles.menu)} alt='Menu burguer'></img>
-    </div>
-                                 
-    <div className={css(styles.mapPage)}>
-        <h3 className={css(styles.title)}>Quantidade de patinetes disponíveis nessa região</h3>
-      <div className={css(styles.maps)}>
-
-        <Map />
+      <div className={css(styles.header)}>
+        <img src={menu} className={css(styles.menu)} alt='Menu burguer'></img>
       </div>
-      <Button
-        className={css(styles.button)}
-        onClick={() => history.push('scan')}
-      >
-        Alugue agora
+
+      <div className={css(styles.mapPage)}>
+        <h3 className={css(styles.title)}>Patinetes disponíveis nos postos Shell</h3>
+        <div className={css(styles.maps)}>
+
+          <Map />
+        </div>
+        <Button
+          className={css(styles.button)}
+          onClick={() => history.push('scan')}
+        >
+          Alugue agora
       </Button>
-      <Link to='/info'>
-        Como funciona
+        <Link to='/info'>
+          Como funciona
       </Link>
-    </div>
+      </div>
     </>
   )
 }
