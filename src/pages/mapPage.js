@@ -3,8 +3,7 @@ import { StyleSheet, css } from 'aphrodite/no-important';
 import menu from '../images/menu.png';
 import Map from '../components/map';
 import Button from '../components/Button';
-import Link from '../components/Link';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 
 const styles = StyleSheet.create({
@@ -61,9 +60,7 @@ const MapPage = () => {
       >
         Alugue agora
       </Button>
-      <Link
-        onClick={() => history.push('/info')}
-      >
+      <Link to='/info'>
         Como funciona
       </Link>
     </div>
