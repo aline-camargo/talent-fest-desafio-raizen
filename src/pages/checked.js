@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
 const Checked = () => {
     return(
         <div className={css(styles.checkedPage)}>
-            <img src={checked1} className={css(styles.iconCheck)}></img>
+            <img src={checked1} className={css(styles.iconCheck)} alt='Check icon'></img>
             <h1>BOA VIAGEM!</h1>
         </div>
     )
