@@ -3,7 +3,7 @@ import React from 'react';
 function Button(props) {
   return (
     <button
-      onClick={props.handleClick}
+      onClick={() => { console.log("oi"); props.handleClick()}}
       className={props.className}
     >
       {props.title}

@@ -4,13 +4,16 @@ import Map from '../components/map';
 import Button from '../components/Button';
 import Link from '../components/Link';
 
-
 const styles = StyleSheet.create({
+    title: {
+        color:'#404040'
+    },
     mapPage: {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        textAlign:'center'
     },
     maps: {
         width: '350px',
@@ -18,7 +21,8 @@ const styles = StyleSheet.create({
         padding: '1px',
         margin: '3px',
         border: '1px solid #404040',
-        borderRadius: '3px'
+        borderRadius: '3px',
+        position:'relative'
     },
     button: {
         margin: '2em auto',
@@ -33,16 +37,17 @@ const styles = StyleSheet.create({
 const MapPage = () => {
     return (
         <div className={css(styles.mapPage)}>
+            <h3 className={css(styles.title)}>Quantidade de patinetes disponíveis nessa região</h3>
         <div className={css(styles.maps)}> 
         <Map />
         </div>
         <Button
         className={css(styles.button)}
-        onClick={() => console.log('Alugue')}
+        handleClick={() => console.log('Alugue')}
         title='Alugue agora'
         />
         <Link
-        onClick={() => console.log('Como funciona')}     
+        handleClick={() => console.log('Como funciona')}     
         title='Como funciona'      
         />
         </div>
