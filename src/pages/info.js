@@ -82,7 +82,6 @@ const Info = () => {
         <img src={patinetered} className={css(styles.patinete)} alt='Logo Patinete'></img>
         <h4 className={css(styles.title)}>Saiba como funciona</h4>
         <FontAwesomeIcon icon={faChevronDown} className={css(styles.arrowDown)} />
-        {/* <img src={arrow} className={css(styles.arrowIcon)} alt='Seta para baixo'></img> */}
       </header>
       <section className={css(styles.section)}>
         <div className={css(styles.divInfo)}>
