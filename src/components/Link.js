@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Link(props) {
+function Link({ onClick, className, children}) {
   return (
     <a
-      onClick={props.handleClick}
-      className={props.className}
+      onClick={onClick}
+      className={className}
     >
-      {props.title}
+      {children}
     </a>
   )
 }

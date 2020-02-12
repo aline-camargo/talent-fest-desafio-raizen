@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Button(props) {
+function Button({ onClick, className, children}) {
   return (
     <button
-      onClick={props.handleClick}
-      className={props.className}
+      onClick={onClick}
+      className={className}
     >
-      {props.title}
+      {children}
     </button>
   )
 }
